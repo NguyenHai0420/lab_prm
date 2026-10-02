@@ -197,18 +197,6 @@ Future<void> exercise4() async {
   print('\nExercise 4:');
   Stream<int> numbers = Stream.fromIterable([1, 2, 3, 4, 5]);
 
-  // print('Square value:');
-  // numbers.map((number) => number * number).listen((number) {
-  //   print(number);
-  // });
-  //
-  // await Future.delayed(Duration(milliseconds: 100));
-  //
-  // print('Even numbers:');
-  // numbers.where((evenNumber) => evenNumber % 2 == 0).listen((evenNumber) {
-  //   print(evenNumber);
-  // });
-
   // Transform square values using map.
   Stream<int> squareNumbers = numbers.map((number) {
     return number * number;

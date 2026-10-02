@@ -73,7 +73,7 @@ void exercise2() {
     'major': 'SE',
   };
 
-  // Use map access.
+  // Use map access. VD: myInformation['name'].
   print('Name: ${myInformation['name']}');
   print('Age: ${myInformation['age']}');
   print('University: ${myInformation['university']}');
