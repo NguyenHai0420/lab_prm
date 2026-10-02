@@ -1,0 +1,25 @@
+import 'package:lab5/movie.dart';
+
+final List<Movie> movies = [
+ Movie(1,
+     'Marvel',
+     'https://th.bing.com/th/id/OIP.nC8x3mEGL01asBLhff5OZQHaKe?w=186&h=263&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3',
+     'The Marvel Cinematic Universe (MCU) is an American media franchise and shared universe centered on a series of superhero films produced by Marvel Studios.',
+     ['magic, highly advanced technology, monsters'],
+     9.0,
+     ['https://www.youtube.com/watch?v=zic4lDOoLm0&time_continue=0&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fwww.bing.com%2F&embeds_referring_origin=https%3A%2F%2Fwww.bing.com']),
+ Movie(2,
+     'Fast & Furious',
+     'https://tse1.mm.bing.net/th/id/OIP.rHm6cY9E-hrlkgjA84g_bQHaK8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+     'Fast & Furious (formerly known as The Fast and the Furious) is an American action media franchise centered on a series of films revolving around street racing, heists, and spies.',
+     ['high-octane car chases, intense stunts, and thrilling sequences'],
+     8.6,
+     ['https://www.youtube.com/watch?v=BgyCVK2jSdk&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fwww.bing.com%2F&embeds_referring_origin=https%3A%2F%2Fwww.bing.com']),
+ Movie(3,
+     'Transformer',
+     'https://tse4.mm.bing.net/th/id/OIP.4M-narodI_jSM5M1TQg6FQHaK-?r=0&rs=1&pid=ImgDetMain&o=7&rm=3',
+     'A transformer is a static electrical device that transfers energy between circuits using electromagnetic induction.',
+     ['comics, video games, and blockbuster movies'],
+     8.8,
+     ['https://www.youtube.com/watch?v=pjZFXw7WIME']),
+];
