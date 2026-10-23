@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Noise-Canceling Headphones",
+    "category": "Electronics",
+    "price": 99.99,
+    "rating": 4.8,
+    "description": "High-fidelity audio with active noise cancellation and 30-hour battery life.",
+    "stock": 25
+  },
+  {
+    "id": 2,
+    "name": "Smart Fitness Watch Pro",
+    "category": "Wearables",
+    "price": 149.50,
+    "rating": 4.6,
+    "description": "Waterproof fitness tracker with heart rate sensor, SpO2, and AMOLED display.",
+    "stock": 18
+  },
+  {
+    "id": 3,
+    "name": "Ergonomic Mechanical Keyboard",
+    "category": "Accessories",
+    "price": 79.00,
+    "rating": 4.7,
+    "description": "RGB backlit mechanical keyboard with hot-swappable tactile switches.",
+    "stock": 42
+  },
+  {
+    "id": 4,
+    "name": "Ultra-Wide Gaming Monitor 34\"",
+    "category": "Computers",
+    "price": 389.99,
+    "rating": 4.9,
+    "description": "144Hz curved QHD monitor with HDR400 and ultra-fast 1ms response time.",
+    "stock": 10
+  },
+  {
+    "id": 5,
+    "name": "Portable SSD 1TB NVMe",
+    "category": "Storage",
+    "price": 89.99,
+    "rating": 4.8,
+    "description": "High-speed USB-C external solid state drive with up to 1050MB/s read speed.",
+    "stock": 50
+  },
+  {
+    "id": 6,
+    "name": "Fast Wireless Charging Stand",
+    "category": "Accessories",
+    "price": 29.99,
+    "rating": 4.4,
+    "description": "15W fast wireless charger compatible with Qi-enabled smartphones and earbuds.",
+    "stock": 65
+  },
+  {
+    "id": 7,
+    "name": "4K Ultra HD Streaming Stick",
+    "category": "Electronics",
+    "price": 49.99,
+    "rating": 4.5,
+    "description": "Stream your favorite movies and shows in brilliant 4K HDR with voice remote.",
+    "stock": 30
+  },
+  {
+    "id": 8,
+    "name": "Multi-Port USB-C Hub 8-in-1",
+    "category": "Accessories",
+    "price": 39.50,
+    "rating": 4.6,
+    "description": "Includes HDMI 4K, 3x USB 3.0, SD card reader, Gigabit Ethernet, and 100W PD.",
+    "stock": 35
+  }
+]
