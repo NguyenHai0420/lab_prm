@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/lab1/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lab1/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lab1/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lab4/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lab4/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lab4/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lab5/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lab5/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lab5/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lab6/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lab6/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lab6/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lab7/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lab7/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lab7/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lab8/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lab8/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lab8/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lab8B/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lab8B/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lab8B/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
+  </component>
+</module>

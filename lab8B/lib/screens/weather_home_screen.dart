@@ -28,14 +28,22 @@ class _WeatherHomeScreenState extends State<WeatherHomeScreen> {
   late Future<WeatherData> _weatherFuture;
 
   final List<CityLocation> _presetCities = const [
-    CityLocation(name: 'Hà Nội', country: 'Vietnam', latitude: 21.0245, longitude: 105.84117),
-    CityLocation(name: 'TP. Hồ Chí Minh', country: 'Vietnam', latitude: 10.8231, longitude: 106.6297),
-    CityLocation(name: 'Đà Nẵng', country: 'Vietnam', latitude: 16.0544, longitude: 108.2022),
-    CityLocation(name: 'Huế', country: 'Vietnam', latitude: 16.4637, longitude: 107.5909),
-    CityLocation(name: 'Tokyo', country: 'Japan', latitude: 35.6895, longitude: 139.6917),
-    CityLocation(name: 'London', country: 'United Kingdom', latitude: 51.5074, longitude: -0.1278),
-    CityLocation(name: 'Paris', country: 'France', latitude: 48.8566, longitude: 2.3522),
-    CityLocation(name: 'New York', country: 'United States', latitude: 40.7128, longitude: -74.0060),
+    CityLocation(name: 'Hà Nội', country: 'Vietnam',
+        latitude: 21.0245, longitude: 105.84117),
+    CityLocation(name: 'TP. Hồ Chí Minh', country: 'Vietnam',
+        latitude: 10.8231, longitude: 106.6297),
+    CityLocation(name: 'Đà Nẵng', country: 'Vietnam',
+        latitude: 16.0544, longitude: 108.2022),
+    CityLocation(name: 'Huế', country: 'Vietnam',
+        latitude: 16.4637, longitude: 107.5909),
+    CityLocation(name: 'Tokyo', country: 'Japan',
+        latitude: 35.6895, longitude: 139.6917),
+    CityLocation(name: 'London', country: 'United Kingdom',
+        latitude: 51.5074, longitude: -0.1278),
+    CityLocation(name: 'Paris', country: 'France',
+        latitude: 48.8566, longitude: 2.3522),
+    CityLocation(name: 'New York', country: 'United States',
+        latitude: 40.7128, longitude: -74.0060),
   ];
 
   @override
@@ -248,7 +256,7 @@ class _WeatherHomeScreenState extends State<WeatherHomeScreen> {
               label: Text(city.name),
               selected: isSelected,
               selectedColor: Colors.white,
-              backgroundColor: Colors.white.withValues(alpha: 0.2),
+              backgroundColor: Colors.blue.withValues(alpha: 0.5),
               labelStyle: TextStyle(
                 color: isSelected ? Colors.blue.shade900 : Colors.white,
                 fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,

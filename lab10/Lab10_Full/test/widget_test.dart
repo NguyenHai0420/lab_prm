@@ -1,30 +1,67 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:lab10_full/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:lab10_full/models/app_user.dart';
+import 'package:lab10_full/services/session_manager.dart';
+import 'package:lab10_full/services/notification_service.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  group('Lab 10 Full Integrated Tests', () {
+    setUp(() {
+      SharedPreferences.setMockInitialValues({});
+    });
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    test('AppUser model handles serialization and deserialization', () {
+      final user = AppUser(
+        id: '1',
+        username: 'emilys',
+        email: 'emilys@dummyjson.com',
+        fullName: 'Emily Johnson',
+        photoUrl: 'https://dummyjson.com/icon/emilys/128',
+        token: 'token_123',
+        authProvider: AuthProviderType.api,
+        loginTime: DateTime.now(),
+      );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+      final json = user.toJson();
+      expect(json['username'], 'emilys');
+      expect(json['authProvider'], 'api');
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+      final reconstructed = AppUser.fromJson(json);
+      expect(reconstructed.fullName, 'Emily Johnson');
+      expect(reconstructed.authProvider, AuthProviderType.api);
+    });
+
+    test('SessionManager persists AppUser across auto-login check', () async {
+      final manager = SessionManager();
+      expect(await manager.isLoggedIn(), isFalse);
+
+      final user = AppUser(
+        id: '2',
+        username: 'michaelw',
+        email: 'michaelw@dummyjson.com',
+        fullName: 'Michael Williams',
+        photoUrl: '',
+        token: 'token_abc',
+        authProvider: AuthProviderType.google,
+        loginTime: DateTime.now(),
+      );
+
+      await manager.saveSession(user);
+      expect(await manager.isLoggedIn(), isTrue);
+
+      final retrieved = await manager.getSession();
+      expect(retrieved, isNotNull);
+      expect(retrieved!.username, 'michaelw');
+      expect(retrieved.authProvider, AuthProviderType.google);
+
+      await manager.clearSession();
+      expect(await manager.isLoggedIn(), isFalse);
+    });
+
+    test('NotificationService singleton configuration check', () {
+      expect(NotificationService(), isNotNull);
+      expect(NotificationService.channelId, 'lab10_full_channel');
+      expect(NotificationService.channelName, 'Lab 10 Full Notifications');
+    });
   });
 }
